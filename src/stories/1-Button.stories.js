@@ -20,29 +20,6 @@ const Button = (props) => (
   </button>
 );
 
-Button.propTypes = {
-  color: PropTypes.string,
-  /**
-   The text color for the button. 
-  */
-  backgroundColor: PropTypes.string,
-  /**
-  The background color for the button. 
- */
-  padding: PropTypes.string,
-  /**
-The padding of the button. 
-*/
-  margin: PropTypes.string,
-  /**
-The margin of the button. 
-*/
-};
-
-Button.propTypes = {
-  status: PropTypes.oneOf(["red", "green", "emoji"]),
-};
-
 export const AllButtons = () => (
   <div>
     <Button bg={"rgb(30, 185, 68)"} color={"white"} margin={"1rem"}>
@@ -95,4 +72,34 @@ export default {
     componentSubtitle:
       "A Button component that can have its color and content altered",
   },
+};
+
+Button.propTypes = {
+  /**
+    The text color for the button.
+   */
+  color: PropTypes.string,
+  /**
+    The background color for the button.
+   */
+  backgroundColor: PropTypes.string,
+  /**
+    The padding of the button.
+   */
+  padding: PropTypes.string,
+  /**
+    The margin of the button.
+   */
+  margin: PropTypes.string,
+};
+
+// Button.propTypes = {
+//   status: PropTypes.oneOf(["red", "green", "emoji"]),
+// };
+
+Button.defaultProps = {
+  color: null,
+  bg: null,
+  margin: null,
+  padding: null,
 };
